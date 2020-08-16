@@ -16,6 +16,9 @@ function App() {
     { id:4, nombre: 'Tres Leches', precio: 5 },
   ]);
 
+  //Carrito de Compras
+  const [carrito, agregarProducto] = useState([]); //Se crea vacio para ser llenado mediante el boton de compra
+
   return (
     <Fragment>
       <Header
@@ -26,6 +29,9 @@ function App() {
         <Producto
           key = {producto.id} //Cada elemento de una coleccion debe tener un key que lo haga unico
           producto = {producto}
+          productos = {productos}
+          carrito = {carrito}
+          agregarProducto = {agregarProducto}
         />
       ))}
       <Footer
